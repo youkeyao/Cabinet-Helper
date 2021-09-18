@@ -1,2 +1,3 @@
-# Cabinet-Helper
-An App for the Automatic Cabinet project
+# cabinet_helper
+
+An App for the Automatic Cabinet project.
