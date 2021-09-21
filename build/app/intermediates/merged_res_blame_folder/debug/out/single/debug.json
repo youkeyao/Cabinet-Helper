@@ -4,10 +4,6 @@
         "source": "/home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/youkeyao/Documents/Project/Cabinet-Helper/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
-        "source": "/home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/res/drawable/launch_background.xml"
-    },
-    {
         "merged": "/home/youkeyao/Documents/Project/Cabinet-Helper/build/app/intermediates/res/merged/debug/drawable-v21_launch_background.xml.flat",
         "source": "/home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/res/drawable-v21/launch_background.xml"
     },
