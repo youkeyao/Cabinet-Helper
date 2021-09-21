@@ -38,6 +38,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "convert",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/convert-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/cupertino_icons-1.0.3",
       "packageUri": "lib/",
@@ -50,8 +56,20 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "fixnum",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/fixnum-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///home/youkeyao/App/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_blue",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/flutter_blue-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -88,6 +106,18 @@
     {
       "name": "path",
       "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/path-1.8.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "protobuf",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/protobuf-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "rxdart",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/rxdart-0.26.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -152,7 +182,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2021-09-18T18:26:16.506693Z",
+  "generated": "2021-09-18T18:28:39.108649Z",
   "generator": "pub",
   "generatorVersion": "2.15.0-120.0.dev"
 }

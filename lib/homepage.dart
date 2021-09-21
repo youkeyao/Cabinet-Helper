@@ -45,6 +45,7 @@ class HomePageState extends State<HomePage>{
       appBar: AppBar(
         toolbarHeight: 50,
         title: const Text('控制'),
+        centerTitle: true,
       ),
       body: Column(
         children: [
