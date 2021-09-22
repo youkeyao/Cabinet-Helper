@@ -38,6 +38,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "convert",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/convert-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/cupertino_icons-1.0.3",
       "packageUri": "lib/",
@@ -62,14 +68,14 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_lints",
-      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/flutter_lints-1.0.4",
+      "name": "flutter_blue",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/flutter_blue-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "flutter_reactive_ble",
-      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/flutter_reactive_ble-4.0.0",
+      "name": "flutter_lints",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/flutter_lints-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -80,8 +86,20 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "functional_data",
-      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/functional_data-1.0.0",
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///home/youkeyao/App/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "fluttertoast",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/fluttertoast-8.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/js-0.6.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -110,32 +128,14 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "pedantic",
-      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/pedantic-1.11.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "plugin_platform_interface",
-      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/plugin_platform_interface-2.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "protobuf",
       "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/protobuf-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "reactive_ble_mobile",
-      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/reactive_ble_mobile-4.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "reactive_ble_platform_interface",
-      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/reactive_ble_platform_interface-4.0.0",
+      "name": "rxdart",
+      "rootUri": "file:///home/youkeyao/.pub-cache/hosted/pub.flutter-io.cn/rxdart-0.26.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -200,7 +200,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2021-09-21T03:58:55.459805Z",
+  "generated": "2021-09-22T07:52:13.358042Z",
   "generator": "pub",
   "generatorVersion": "2.15.0-126.0.dev"
 }

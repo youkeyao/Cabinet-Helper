@@ -5,9 +5,8 @@ INJECTED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/ma
 INJECTED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml:1:1-35:12
 INJECTED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml:1:1-35:12
 MERGED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml:1:1-35:12
-MERGED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-13:12
-MERGED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:2:1-17:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/0271cb271ab1c01988ee26f722943de8/jetified-rxandroid-2.1.1/AndroidManifest.xml:15:1-20:12
+MERGED from [:fluttertoast] /home/youkeyao/Documents/Project/Cabinet-Helper/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/2fd9120a6da4df3dbabdd40f6a2d8995/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.0.0] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/68dbf8ea01a1dbd974fc87b5753550f0/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/eb26273f8f7192460456ce62b9bdf9ef/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -88,18 +87,14 @@ ADDED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/
 		ADDED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml:29:13-44
 uses-permission#android.permission.BLUETOOTH
 ADDED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml:32:5-68
-MERGED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-68
-MERGED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-68
-MERGED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:11:5-68
-MERGED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:11:5-68
+MERGED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-68
+MERGED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-68
 	android:name
 		ADDED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml:32:22-65
 uses-permission#android.permission.BLUETOOTH_ADMIN
 ADDED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml:33:5-74
-MERGED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-74
-MERGED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-74
-MERGED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:12:5-74
-MERGED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:12:5-74
+MERGED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-74
+MERGED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-74
 	android:name
 		ADDED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml:33:22-71
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
@@ -110,12 +105,10 @@ uses-sdk
 INJECTED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml
 INJECTED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/main/AndroidManifest.xml
-MERGED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:7:5-9:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/0271cb271ab1c01988ee26f722943de8/jetified-rxandroid-2.1.1/AndroidManifest.xml:18:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/0271cb271ab1c01988ee26f722943de8/jetified-rxandroid-2.1.1/AndroidManifest.xml:18:5-43
+MERGED from [:fluttertoast] /home/youkeyao/Documents/Project/Cabinet-Helper/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /home/youkeyao/Documents/Project/Cabinet-Helper/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/2fd9120a6da4df3dbabdd40f6a2d8995/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/2fd9120a6da4df3dbabdd40f6a2d8995/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.0.0] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/68dbf8ea01a1dbd974fc87b5753550f0/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -155,14 +148,6 @@ ADDED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/debug
 	android:name
 		ADDED from /home/youkeyao/Documents/Project/Cabinet-Helper/android/app/src/debug/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
+ADDED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from [:reactive_ble_mobile] /home/youkeyao/Documents/Project/Cabinet-Helper/build/reactive_ble_mobile/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-76
-uses-permission-sdk-23#android.permission.ACCESS_COARSE_LOCATION
-ADDED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:14:5-88
-	android:name
-		ADDED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:14:29-85
-uses-permission-sdk-23#android.permission.ACCESS_FINE_LOCATION
-ADDED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:15:5-86
-	android:name
-		ADDED from [com.polidea.rxandroidble2:rxandroidble:1.12.1] /home/youkeyao/.gradle/caches/transforms-2/files-2.1/c1bd89ebbc4c730b2a8622c81d2d426d/jetified-rxandroidble-1.12.1/AndroidManifest.xml:15:29-83
+		ADDED from [:flutter_blue] /home/youkeyao/Documents/Project/Cabinet-Helper/build/flutter_blue/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-76
