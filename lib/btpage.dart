@@ -15,6 +15,7 @@ class BTPage extends StatefulWidget{
 class BTPageState extends State<BTPage>{
   Set<BluetoothDevice> devices = {};
   String status = CommonVariable.btdevice == null ? '未连接' : '已连接';
+  bool isScan = false;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class BTPageState extends State<BTPage>{
         leading: const Icon(Icons.bluetooth),
         title: Text(status),
         centerTitle: true,
-        actions: [IconButton(onPressed: scanDevice, icon: const Icon(Icons.refresh))],
+        actions: [IconButton(onPressed: isScan ? null : scanDevice, icon: const Icon(Icons.refresh))],
       ),
       body: StreamBuilder<BluetoothState>(
         stream: FlutterBlue.instance.state,
@@ -33,7 +34,7 @@ class BTPageState extends State<BTPage>{
           CommonVariable.btstate = snapshot.data;
           if (CommonVariable.btstate == BluetoothState.on) {
             return ListView(
-              children: devices.map((d) => TextButton(
+              children: devices.map((d) => d.name == "" ? Container() : TextButton(
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 18,horizontal: 15)),
                   foregroundColor: MaterialStateProperty.all(d == CommonVariable.btdevice ? Colors.blue : Colors.grey),
@@ -41,7 +42,7 @@ class BTPageState extends State<BTPage>{
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(d.name == "" ? "unknown" : d.name, style: const TextStyle(fontSize: 18.0,),),
+                    Text(d.name, style: const TextStyle(fontSize: 18.0,),),
                     Text(d.id.toString(), style: const TextStyle(fontSize: 18.0,),),
                   ],
                 ),
@@ -73,7 +74,12 @@ class BTPageState extends State<BTPage>{
         });
       }
     });
-    if (CommonVariable.btstate == BluetoothState.on) {
+    CommonVariable.flutterBlue.isScanning.listen((value) {
+      setState(() {
+        isScan = value;
+      });
+    });
+    if (CommonVariable.btstate != BluetoothState.off) {
       scanDevice();
     }
   }
@@ -83,24 +89,26 @@ class BTPageState extends State<BTPage>{
       devices.clear();
       if (CommonVariable.btdevice != null) devices.add(CommonVariable.btdevice!);
     });
-    CommonVariable.flutterBlue.startScan(timeout: const Duration(seconds: 2));
-    CommonVariable.flutterBlue.stopScan();
+    if (!isScan) {
+      CommonVariable.flutterBlue.startScan(timeout: const Duration(seconds: 4));
+    }
   }
 
   void pressDevice(BluetoothDevice d) async {
     d.state.listen((v) {
       switch (v) {
         case BluetoothDeviceState.connected: CommonVariable.btdevice = d; setState(() {status = '已连接';}); break;
+        case BluetoothDeviceState.connecting: setState(() {status = '连接中';}); break;
         case BluetoothDeviceState.disconnecting: setState(() {status = '断开中';}); break;
         case BluetoothDeviceState.disconnected: CommonVariable.btdevice = null; CommonVariable.btcha = null; setState(() {status = '未连接';}); break;
         default: setState(() {status = v.toString();});
       }
+      scanDevice();
     });
     if (d == CommonVariable.btdevice) {
       await d.disconnect();
     }
     else {
-      setState(() {status = '连接中';});
       await CommonVariable.btdevice?.disconnect();
       await d.connect(autoConnect: false, timeout: const Duration(seconds: 10));
       List<BluetoothService> services = await CommonVariable.btdevice!.discoverServices();
@@ -112,11 +120,13 @@ class BTPageState extends State<BTPage>{
             // print(characteristic.uuid.toString());
             if (characteristic.uuid.toString().substring(4, 8) == 'ffe1') {
               CommonVariable.btcha = characteristic;
+              await characteristic.setNotifyValue(true);
             }
           }
         }
       }
     }
+    devices.remove(d);
     scanDevice();
   }
 }

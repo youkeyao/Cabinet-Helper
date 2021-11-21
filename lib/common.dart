@@ -5,5 +5,5 @@ class CommonVariable{
   static BluetoothState? btstate;
   static BluetoothDevice? btdevice;
   static BluetoothCharacteristic? btcha;
-  static List<String> tags = ['空', '空', '空', '空'];
+  static List<String> tags = ['空', '空', '空'];
 }

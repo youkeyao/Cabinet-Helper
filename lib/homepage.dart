@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
@@ -29,9 +31,7 @@ class _TagWidgetState extends State<TagWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // margin: EdgeInsets.only(top: 20),
-      // height: 2000,
-      // width: 10000,
+      height: 230,
       alignment: Alignment.center,
       child: Column(
         children: [
@@ -45,6 +45,7 @@ class _TagWidgetState extends State<TagWidget> {
           Padding(
             padding: const EdgeInsets.all(20),
             child: TextField(
+              textAlign: TextAlign.center,
               style: const TextStyle(color: Colors.black87),
               controller: controller,
               decoration: const InputDecoration(
@@ -87,19 +88,20 @@ class _TagWidgetState extends State<TagWidget> {
 }
 
 class ControlButton extends StatelessWidget {
-  const ControlButton({ Key? key, required this.index, required this.tag, required this.press}) : super(key: key);
+  const ControlButton({ Key? key, required this.index, required this.tag, required this.press, required this.color}) : super(key: key);
   final int index;
   final Text tag;
   final Function press;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(18.0),
         child: ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.brown),
+            backgroundColor: MaterialStateProperty.all(color),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -125,7 +127,7 @@ class HomePage extends StatefulWidget{
 }
 
 class HomePageState extends State<HomePage>{
-  List<String> tags = ['空', '空', '空', '空'];
+  List<String> tags = ['空', '空', '空'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -134,25 +136,16 @@ class HomePageState extends State<HomePage>{
         title: const Text('控制'),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: Row(
-              children: [
-                ControlButton(index: 1, tag: Text(tags[0]), press: press,),
-                ControlButton(index: 2, tag: Text(tags[1]), press: press,)
-              ]
-            ),
-          ),
-          Expanded(
-            child: Row(
-              children: [
-                ControlButton(index: 3, tag: Text(tags[2]), press: press,),
-                ControlButton(index: 4, tag: Text(tags[3]), press: press,)
-              ]
-            ),
-          )
-        ], 
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            ControlButton(index: 1, tag: Text(tags[0]), press: press, color: tags[0] == '空' ? Colors.lightGreen : Colors.red,),
+            ControlButton(index: 2, tag: Text(tags[1]), press: press, color: tags[1] == '空' ? Colors.lightGreen : Colors.red,),
+            ControlButton(index: 3, tag: Text(tags[2]), press: press, color: tags[2] == '空' ? Colors.lightGreen : Colors.red,),
+          ], 
+        ),
       ),
     );
   }
@@ -161,17 +154,43 @@ class HomePageState extends State<HomePage>{
   void initState() {
     super.initState();
     copyArray(CommonVariable.tags, tags);
-    CommonVariable.btcha?.setNotifyValue(true);
+    CommonVariable.btcha?.write([48], withoutResponse: true);
     CommonVariable.btcha?.value.listen((value) {
-      if (49 <= value[0] && value[0] <= 52) {
-        int index = value[0] - 49;
-        // print('uuuuuuu' + tags.toString());
-        // print('uuuuuuu' + CommonVariable.tags.toString());
-        CommonVariable.tags[index] = tags[index];
-        setState(() {
-          tags[index] = CommonVariable.tags[index];
-        });
+      Map<int, List<int>> message = {};
+      int index = 0;
+      for (int i in value) {
+        if (index == 0) {
+          message[i] = [];
+          index = i;
+        }
+        else if (i == 0) {
+          index = 0;
+        }
+        else {
+          message[index]?.add(i);
+        }
       }
+      message.forEach((key, v) {
+        if (49 <= key && key <= 52) {
+          int index = key - 49;
+          String tag = utf8.decode(v);
+          CommonVariable.tags[index] = (v.isEmpty ? '空' : tag);
+          setState(() {
+            tags[index] = CommonVariable.tags[index];
+          });
+        }
+        else {
+          Fluttertoast.showToast(
+            msg: "未放置物品或正在运行",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.black38,
+            textColor: Colors.white,
+            fontSize: 16.0
+          );
+        }
+      });
     });
   }
 
@@ -196,14 +215,13 @@ class HomePageState extends State<HomePage>{
         return const TagDialog(contentWidget: TagWidget(),);
       }).then((value) {
         if (value != "") {
-          CommonVariable.btcha?.write([48 + index], withoutResponse: false);
-          tags[index-1] = value;
+          List<int> bytes = [48 + index] + utf8.encode(value);
+          CommonVariable.btcha?.write(bytes, withoutResponse: false);
         }
       });
     }
     else {
-      CommonVariable.btcha?.write([48 + index], withoutResponse: true);
-      tags[index-1] = '空';
+      CommonVariable.btcha?.write([48 + index], withoutResponse: false);
     }
   }
 }
